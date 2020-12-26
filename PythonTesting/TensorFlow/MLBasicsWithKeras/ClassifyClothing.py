@@ -25,7 +25,7 @@ model.compile(
     metrics=["accuracy"]
 )
 
-model.fit(trainImages, trainData, epochs=1)
+model.fit(trainImages, trainData, epochs=10)
 
 probabilityModel = keras.Sequential([
     model,
@@ -77,4 +77,4 @@ for i in range(num_images):
   plt.subplot(num_rows, 2*num_cols, 2*i+2)
   plot_value_array(i, predictions[i], testData)
 plt.tight_layout()
-plt.show()
+#plt.show()
